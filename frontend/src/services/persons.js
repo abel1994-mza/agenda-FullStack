@@ -16,3 +16,5 @@ const deletePerson = (id) => {
   return axios.delete(`${baseURL}/${id}`);
 };
 export default { getAll, create, deletePerson };
+
+// const hola = ()=>{}
