@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-let persons = [{ id: "1", name: "Abel", number: "659661750" }];
+let persons = [{ id: "1", name: "Abel", number: "65966170" }];
 
 //Obtener personas de la api
 app.get("/api/persons", (req, res) => res.json(persons));
