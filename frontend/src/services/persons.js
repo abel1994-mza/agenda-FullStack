@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //A que api vamos a consumir.?
-const baseURL = "http://localhost:5000/api/persons";
+const baseURL = "/api/persons";
 
 //Obtener personas del api
 const getAll = () => {
