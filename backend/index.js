@@ -11,7 +11,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(history());
-app.use(express.static("dist"));
+// app.use(express.static("dist"));
+app.use(express.static(path.join(__dirname, "dist")));
 
 let persons = [{ id: "1", name: "Abel", number: "65966170" }];
 
