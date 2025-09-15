@@ -16,10 +16,6 @@ let persons = [{ id: "1", name: "Abel", number: "65966170" }];
 //Obtener personas de la api
 app.get("/api/persons", (req, res) => res.json(persons));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
-});
-
 //Crear nueva persona
 app.post("/api/persons", (req, res) => {
   const body = req.body;
@@ -67,6 +63,10 @@ app.delete("/api/persons/:id", (req, res) => {
 
   persons = newPersons;
   res.status(204).end();
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 const PORT = process.env.PORT || 5000;
