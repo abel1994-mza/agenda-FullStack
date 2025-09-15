@@ -67,9 +67,5 @@ app.delete("/api/persons/:id", (req, res) => {
   res.status(204).end();
 });
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
-});
-
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, console.log(`Servidor corriendo el PORT:${PORT}`));
